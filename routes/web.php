@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ApplicationController;
 use App\Models\Job;
+use App\Models\Application;
 
 // Public job listings
 Route::get('/', function () {
@@ -13,3 +14,7 @@ Route::get('/', function () {
 Route::get('/jobs/{job}', [ApplicationController::class, 'show'])->name('jobs.show');
 Route::post('/jobs/{job}/apply', [ApplicationController::class, 'apply'])->name('jobs.apply');
 
+Route::get('/admin/jobs/{job}/applicants', function (\App\Models\Job $job) {
+    $applicants = $job->applications()->latest()->get();
+    return view('admin.applicants', compact('job', 'applicants'));
+})->name('admin.applicants');

@@ -14,4 +14,10 @@ class Job extends Model
     {
         return $this->hasMany(Applicant::class);
     }
+
+    public function applications()
+    {
+        return $this->hasMany(\App\Models\Application::class);
+    }
+
 }
