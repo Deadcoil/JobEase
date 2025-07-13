@@ -1,6 +1,7 @@
 # JOBEASE
 
 Empowering Careers, Simplifying Success Every Step
+Find Your Dream Job with JobEase
 
 ![Last Commit](https://img.shields.io/badge/last--commit-today-blue) ![JavaScript Percentage](https://img.shields.io/badge/javascript-35.7%25-blue) ![Languages](https://img.shields.io/badge/languages-4-blue)
 
@@ -81,6 +82,13 @@ Using npm:
 npm start
 ```
 
+### Admin Panel Usage
+
+Use these demo credentials for accessing the admin panel:
+
+*   **Username:** `admin`
+*   **Password:** `admin123`
+
 ## Testing
 
 JobEase uses the `{test_framework}` test framework. Run the test suite with:
@@ -92,4 +100,3 @@ npm test
 ```
 
 [⬆️ Return](#jobease)
-```
