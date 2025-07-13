@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - JobEase</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md">
+        <div class="bg-white p-8 rounded-lg shadow-md text-center">
+            <div class="mb-6">
+                <svg class="h-16 w-16 text-blue-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m-8 0V6a2 2 0 00-2 2v6"></path>
+                </svg>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Admin Login</h2>
+            <p class="text-gray-600 mb-8">Sign in to manage jobs and applications</p>
+
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Login to JobEase Admin</h3>
+                <form id="adminLoginForm" class="space-y-4">
+                    <div>
+                        <label for="username" class="sr-only">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Username" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="password" class="sr-only">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <button type="submit" id="loginButton"
+                            class="w-full bg-blue-600 text-white py-2 px-4 rounded-md font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+                        <span id="loadingSpinner" class="hidden animate-spin h-5 w-5 mr-3 border-t-2 border-b-2 border-white rounded-full"></span>
+                        <span id="buttonText">Sign In</span>
+                    </button>
+                    <p id="loginError" class="text-red-600 text-sm mt-2 hidden"></p>
+                </form>
+            </div>
+
+            <div class="bg-blue-50 text-blue-800 p-4 rounded-lg mt-6 text-sm">
+                <p class="font-semibold">Demo Credentials:</p>
+                <p>Username: <span class="font-mono">admin</span></p>
+                <p>Password: <span class="font-mono">admin123</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="/js/admin/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - All Jobs</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+  <header class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-gray-800">Admin Dashboard</h1>
+    <nav>
+      <ul class="flex space-x-4">
+        <li><a href="/dashboard.html" class="text-gray-600 hover:text-gray-900">Dashboard</a></li>
+        <li><a href="/admin/jobs.html" class="text-blue-600 font-semibold">Jobs</a></li>
+        <li><a href="/../index.html" class="text-gray-600 hover:text-gray-900">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="flex-1 container mx-auto p-6">
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl font-semibold text-gray-800">All Job Listings</h2>
+        <a href="/admin/jobs/new.html" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition duration-300">
+          Add New Job
+        </a>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+          <thead>
+            <tr class="bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th class="py-3 px-4 border-b border-gray-200">Job Title</th>
+              <th class="py-3 px-4 border-b border-gray-200">Employment Type</th>
+              <th class="py-3 px-4 border-b border-gray-200">Location</th>
+              <th class="py-3 px-4 border-b border-gray-200">Status</th>
+              <th class="py-3 px-4 border-b border-gray-200 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white py-4 text-center text-sm">
+    <p>&copy; 2025 JobEase Admin. All rights reserved.</p>
+  </footer>
+  <script src="/js/admin/jobs.js"></script>
+</body>
+</html>

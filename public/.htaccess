@@ -1,0 +1,31 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /jobease-php/public/
+
+    # ✅ Custom rule: map /admin to admin/login.html
+    RewriteRule ^admin$ admin/login.html [L]
+
+    # ✅ Default Laravel-style routing fallback
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+```**Important**: Remember to adjust `RewriteBase` if your project is not directly in `htdocs` or if you rename `jobease-php`. For example, if `jobease-php` is directly in `htdocs`, `RewriteBase` should be `/jobease-php/public/`. If you're running it directly from `htdocs` as the root, it might be `/`.
+
+### Next Steps
+
+This is a foundational setup. In the next responses, I will provide:
+*   The HTML templates for the public and admin sections.
+*   The JavaScript files for frontend interactivity.
+*   The PHP API endpoints for handling requests.
+
+Please set up this structure, database, and run `npm run build:css` in your terminal. Once you have your PHP server running and can access `http://localhost/jobease-php/public/` (or `http://localhost:8000/`), let me know, and we'll proceed with the frontend and API implementations!
+
+<Actions>
+  <Action name="Set up MySQL database" description="Create 'jobease_db' and run schema.sql and seed.sql." />
+  <Action name="Configure database.php" description="Update app/config/database.php with your MySQL credentials." />
+  <Action name="Install Node.js dependencies" description="Run 'npm install' in the project root." />
+  <Action name="Start Tailwind CSS build" description="Run 'npm run build:css' in a separate terminal and keep it running." />
+  <Action name="Start PHP server" description="Use XAMPP/MAMP or 'php -S localhost:8000 -t public' from the project root." />
+</Actions>
